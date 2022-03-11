@@ -3,6 +3,9 @@ Powered by Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project Live
+https://eloquent-knuth-809b66.netlify.app/
+
 Special thanks to Graeme Fulton and his stars animation made with Three.js: https://codepen.io/GraemeFulton/pen/BNyQMM
 ## Available Scripts
 
