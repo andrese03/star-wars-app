@@ -24,7 +24,7 @@ function init(element: HTMLElement) {
   //renderer
   renderer = new THREE.WebGLRenderer();
   //set the size of the renderer
-  renderer.setSize(window.innerWidth, window.innerHeight - 70);
+  renderer.setSize(window.innerWidth, window.innerHeight - 86);
   //add the renderer to the html document body
   element.appendChild(renderer.domElement);
 }
@@ -73,7 +73,7 @@ const StarsBackground = () => {
   const element = React.useRef<HTMLDivElement>(null);
 
   const resetSize = () => {
-    renderer.setSize(window.innerWidth, window.innerHeight - 70);
+    renderer.setSize(window.innerWidth, window.innerHeight - 86);
   };
 
   React.useEffect(() => {
