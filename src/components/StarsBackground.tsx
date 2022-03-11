@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import React from "react";
 import * as THREE from "three";
 import logo from "../assets/logo.svg";
@@ -96,9 +97,12 @@ const StarsBackground = () => {
         alignItems: "center",
       }}
     >
-      <img
-        style={{
+      <Box
+        component="img"
+        sx={{
           position: "absolute",
+          width: { xs: "200px", sm: "450px " },
+          height: { xs: "200px", sm: "450px " },
         }}
         src={logo}
       />
