@@ -3,7 +3,7 @@ import * as THREE from "three";
 import logo from "../assets/logo.svg";
 
 //Declare three.js variables
-const stars: THREE.Mesh<THREE.SphereGeometry, THREE.MeshBasicMaterial>[] = [];
+let stars: THREE.Mesh<THREE.SphereGeometry, THREE.MeshBasicMaterial>[] = [];
 let camera: THREE.PerspectiveCamera;
 let scene: THREE.Scene;
 let renderer: THREE.WebGLRenderer;
@@ -71,14 +71,21 @@ function render() {
 const StarsBackground = () => {
   const element = React.useRef<HTMLDivElement>(null);
 
+  const resetSize = () => {
+    renderer.setSize(window.innerWidth, window.innerHeight - 70);
+  };
+
   React.useEffect(() => {
     init(element.current as HTMLElement);
     addSphere();
     render();
-
-    window.addEventListener("resize", function () {
-      renderer.setSize(window.innerWidth, window.innerHeight - 70);
-    });
+    window.addEventListener("resize", resetSize);
+    return () => {
+      window.removeEventListener("resize", resetSize);
+      renderer.dispose();
+      stars = [];
+      console.log("dispose");
+    };
   }, []);
 
   return (

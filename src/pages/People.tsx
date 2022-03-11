@@ -43,7 +43,11 @@ function People() {
         icon={<Icon fill="white" height={40} width={40} />}
       />
 
-      <Search value={search} onChange={handleSearch} />
+      <Search
+        value={search}
+        onChange={handleSearch}
+        placeholder="Search for the chosen one..."
+      />
 
       <List
         keySelector={(person) => person.url}
@@ -56,7 +60,8 @@ function People() {
 
       <Button
         onClick={handleLoadMoreButtonClick}
-        loading={loading}
+        // This extra loading validation is to prevent two spinners on the screen at the same time
+        loading={loading && people.length > 0}
         disabled={loading || people.length >= count}
       >
         Load more

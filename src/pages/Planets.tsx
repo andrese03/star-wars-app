@@ -56,7 +56,8 @@ function People() {
 
       <Button
         onClick={handleLoadMoreButtonClick}
-        loading={loading}
+        // This extra loading validation is to prevent two spinners on the screen at the same time
+        loading={loading && planets.length > 0}
         disabled={loading || planets.length >= count}
       >
         Load more

@@ -1,5 +1,12 @@
-// Model Interfaces
+// Global
+declare global {
+  interface Window {
+    chosenOne: boolean;
+    // Custom global properties
+  }
+}
 
+// Model Interfaces
 export interface Item {
   id: number;
 }
