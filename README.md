@@ -6,7 +6,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Project Live
 https://eloquent-knuth-809b66.netlify.app/
 
-Special thanks to Graeme Fulton and his stars animation made with Three.js: https://codepen.io/GraemeFulton/pen/BNyQMM
+## Special Thanks
+Special thanks to Graeme Fulton. Who create this cool codepen that allowed me to add a nice touch to the assessment! He made it with Three.js: https://codepen.io/GraemeFulton/pen/BNyQMM
+
 ## Available Scripts
 
 In the project directory, you can run:
