@@ -7,10 +7,11 @@ interface Props {
   value: string;
   onChange: (value: string) => void;
   disabled?: boolean;
+  placeholder?: string;
 }
 
 function Search(props: Props) {
-  const { value, onChange, disabled = false } = props;
+  const { value, onChange, disabled = false, placeholder } = props;
   const [search, setSearch] = useState("");
   const debouncedSearch = useDebounce(search, 1000);
 
@@ -28,7 +29,7 @@ function Search(props: Props) {
         id="app-search"
         label="Search"
         variant="outlined"
-        placeholder="Search for the chosen one..."
+        placeholder={placeholder ?? "Search..."}
         InputLabelProps={{
           shrink: true,
         }}

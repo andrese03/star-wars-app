@@ -56,7 +56,8 @@ function Films() {
 
       <Button
         onClick={handleLoadMoreButtonClick}
-        loading={loading}
+        // This extra loading validation is to prevent two spinners on the screen at the same time
+        loading={loading && films.length > 0}
         disabled={loading || films.length >= count}
       >
         Load more
